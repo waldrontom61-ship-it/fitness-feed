@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fitness Tips Feed</title>
+<style>
+  body { font-family: sans-serif; background: #fff; color: #000; padding: 20px; }
+  h1 { text-align: center; }
+  .item { margin-bottom: 20px; }
+  h2 { margin: 0 0 5px; font-size: 1.2em; }
+  p { margin: 0; font-size: 1em; }
+</style>
+</head>
+<body>
+<h1>Fitness Tips</h1>
+<div id="feed"></div>
+
+<script>
+fetch('fitness-tips.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('feed');
+    let index = 0;
+
+    function showNext() {
+      container.innerHTML = '';
+      const item = data[index];
+      const div = document.createElement('div');
+      div.className = 'item';
+      div.innerHTML = `<h2>${item.title}</h2><p>${item.description}</p>`;
+      container.appendChild(div);
+
+      index = (index + 1) % data.length; // loop back to start
+    }
+
+    showNext(); // show first tip
+    setInterval(showNext, 10000); // rotate every 10 seconds
+  });
+</script>
+</body>
+</html>
