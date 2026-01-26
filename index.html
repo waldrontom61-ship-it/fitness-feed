@@ -168,7 +168,7 @@
     <header class="text-center mb-8 md:mb-12">
      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm shadow-sm mb-4"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> <span class="text-sm font-medium text-emerald-700" id="subtitle-display">Daily Wellness Inspiration</span>
      </div>
-     <h1 id="main-title-display" class="font-display text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-2">Heart Health Facts</h1>
+     <h1 id="main-title-display" class="font-display text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-2">Health Tips</h1>
     </header><!-- Tips Container -->
     <div class="w-full max-w-4xl relative" style="min-height: 320px;">
      <div id="feed" class="relative"></div>
@@ -209,16 +209,6 @@
     const INTERVAL_DURATION = 10;
 
     function createTipCard(tip, index) {
-      const categoryColors = {
-        "Hydration": { bg: "bg-blue-50", text: "text-blue-700", border: "border-blue-200" },
-        "Movement": { bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-200" },
-        "Rest": { bg: "bg-purple-50", text: "text-purple-700", border: "border-purple-200" },
-        "Nutrition": { bg: "bg-green-50", text: "text-green-700", border: "border-green-200" },
-        "Mental Health": { bg: "bg-rose-50", text: "text-rose-700", border: "border-rose-200" },
-        "Digital Wellness": { bg: "bg-cyan-50", text: "text-cyan-700", border: "border-cyan-200" }
-      };
-
-      const colors = categoryColors[tip.category] || { bg: "bg-gray-50", text: "text-gray-700", border: "border-gray-200" };
 
       const div = document.createElement('div');
       div.className = `tip-card glass-card rounded-3xl p-8 md:p-12 shadow-2xl border border-white/50`;
@@ -232,10 +222,6 @@
           <p class="tip-description text-lg md:text-xl leading-relaxed max-w-2xl mb-6" style="color: ${config.text_color}; opacity: 0.8;">
             ${tip.description}
           </p>
-          <span class="tip-category inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium ${colors.bg} ${colors.text} border ${colors.border}">
-            <span class="w-1.5 h-1.5 rounded-full bg-current"></span>
-            ${tip.category}
-          </span>
         </div>
       `;
 
@@ -474,5 +460,5 @@
 
     init();
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c42f2b0b18a98e3',t:'MTc2OTQ2MTMxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c42f845c64198e3',t:'MTc2OTQ2MTU0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
